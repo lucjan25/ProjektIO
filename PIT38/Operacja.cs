@@ -78,7 +78,7 @@ namespace PIT38
         {
             if (OnlyCost)
             {
-                return GetCost();
+                return -GetCost();
             }
             else if (Closed)
             {
@@ -111,7 +111,7 @@ namespace PIT38
             string s = "";
             if (OnlyCost)
             {
-                s = String.Format("{0}: -{1}", CloseTime.ToString(), GetCost());
+                s = String.Format("{0}: -{1}", CloseTime.ToString(), Math.Round(GetCost(), 2));
             }
             else if (Closed)
             {
@@ -121,7 +121,7 @@ namespace PIT38
                 else
                     b = "sell";
                 s = String.Format("{0} - {1}-{2}, {3}: {4} szt. Cena otwarcia {5} {6}, Cena zamknięcia {7} {8}", 
-                    Ticker, OpenTime, CloseTime, b, Amount, OpenPrice, Currency, ClosePrice, Currency);
+                    Ticker, OpenTime, CloseTime, b, Amount, Math.Round(OpenPrice, 2), Currency, Math.Round(ClosePrice, 2), Currency);
             }
             else
             {
