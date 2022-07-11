@@ -1,0 +1,26 @@
+﻿<Window x:Class="PIT38.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PIT38"
+        mc:Ignorable="d"
+        Title="PIT-38" Height="420" Width="960" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="504*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="279*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="btAdd" Content="Nowa operacja" HorizontalAlignment="Left" Height="30" Margin="49,103,0,0" VerticalAlignment="Top" Width="104" Grid.Column="2" Click="btAdd_Click"/>
+        <Button x:Name="btEdit" Content="Edytuj zaznaczone" HorizontalAlignment="Left" Height="30" Margin="49,138,0,0" VerticalAlignment="Top" Width="104" Grid.Column="2" Click="btEdit_Click"/>
+        <Button x:Name="btRemove" Content="Usuń zaznaczone" HorizontalAlignment="Left" Height="30" Margin="49,173,0,0" VerticalAlignment="Top" Width="104" Grid.Column="2" Click="btRemove_Click"/>
+        <TextBox x:Name="txtSearch" HorizontalAlignment="Left" Height="30" Margin="49,36,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="276" FontSize="20" Grid.Column="2" TextChanged="txtSearch_TextChanged"/>
+        <Button x:Name="btResult" Content="Licz wynik" HorizontalAlignment="Left" Height="30" Margin="49,237,0,0" VerticalAlignment="Top" Width="86" Grid.Column="2" Click="btResult_Click"/>
+        <ListBox x:Name="lbData" HorizontalAlignment="Left" Height="384" VerticalAlignment="Center" Width="649" d:ItemsSource="{Binding operacje}" Margin="10,0,0,0" Grid.ColumnSpan="3"/>
+        <Button x:Name="btSave" Content="Zapisz listę" HorizontalAlignment="Left" Height="30" Margin="239,103,0,0" VerticalAlignment="Top" Width="86" Grid.Column="2" Click="btSave_Click"/>
+        <Button x:Name="btLoad" Content="Wczytaj listę" HorizontalAlignment="Left" Height="30" Margin="239,138,0,0" VerticalAlignment="Top" Width="86" Grid.Column="2" Click="btLoad_Click"/>
+        <Label Grid.Column="2" Content="Szukaj" HorizontalAlignment="Left" Margin="49,10,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,37 @@
+﻿<Window x:Class="PIT38.AddWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PIT38"
+        mc:Ignorable="d"
+        Title="AddWindow" Height="420" Width="621">
+    <Grid>
+        <DatePicker x:Name="dpOpen" Focusable = "False" HorizontalAlignment="Left" Height="24" Margin="41,45,0,0" VerticalAlignment="Top" Width="120" DisplayDateEnd="2021-12-31" DisplayDateStart="2021-01-01" FirstDayOfWeek="Monday" DisplayDate="2021-01-01"/>
+        <DatePicker x:Name="dpClose" Focusable = "False" HorizontalAlignment="Left" Height="24" Margin="192,45,0,0" VerticalAlignment="Top" Width="120" DisplayDateEnd="2021-12-31" DisplayDateStart="2021-01-01" FirstDayOfWeek="Monday" DisplayDate="2021-01-01"/>
+        <TextBox x:Name="tbTicker" HorizontalAlignment="Left" Height="20" Margin="44,105,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="62"/>
+        <RadioButton x:Name="rbOpen" GroupName = "Typ" Content="Otwarta" HorizontalAlignment="Left" Height="24" Margin="371,45,0,0" VerticalAlignment="Top" Width="95" Checked="rbOpen_Checked"/>
+        <RadioButton x:Name="rbClosed" GroupName = "Typ" Content="Zamknięta" HorizontalAlignment="Left" Height="24" Margin="371,74,0,0" VerticalAlignment="Top" Width="95" Checked="rbClosed_Checked"/>
+        <RadioButton x:Name="rbCost" GroupName = "Typ" Content="Tylko koszt" HorizontalAlignment="Left" Height="24" Margin="371,103,0,0" VerticalAlignment="Top" Width="95" Checked="rbCost_Checked"/>
+        <RadioButton x:Name="rbBuy" Content="Kupno/long" GroupName = "Buy" HorizontalAlignment="Left" Margin="482,45,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rbSell" Content="Sprzedaż/short" GroupName = "Buy" HorizontalAlignment="Left" Margin="482,74,0,0" VerticalAlignment="Top"/>
+
+        <CheckBox x:Name="cbLeverage" Content="Dźwignia" HorizontalAlignment="Left" Margin="42,270,0,0" VerticalAlignment="Top" Checked="cbLeverage_Checked" Unchecked="cbLeverage_Unchecked"/>
+        <TextBox x:Name="tbLeverage" HorizontalAlignment="Left" Margin="42,290,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" InputScope="Number" IsEnabled="False"/>
+        <TextBox x:Name="tbAmount" HorizontalAlignment="Left" Margin="42,157,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="64" InputScope="Number" Height="20"/>
+        <TextBox x:Name="tbOpen" HorizontalAlignment="Left" Margin="42,224,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" InputScope="CurrencyAmount"/>
+        <TextBox x:Name="tbClose" HorizontalAlignment="Left" Height="17" Margin="199,224,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" InputScope="CurrencyAmount"/>
+        <Button x:Name="btZapisz" Content="Zapisz" HorizontalAlignment="Left" Margin="371,148,0,0" VerticalAlignment="Top" Height="30" Width="86" Click="btZapisz_Click"/>
+        <Button x:Name="btCofnij" Content="Cofnij" HorizontalAlignment="Left" Margin="371,186,0,0" VerticalAlignment="Top" Height="30" Width="86" Click="btCofnij_Click"/>
+        <Label Content="Data otwarcia" HorizontalAlignment="Left" Margin="41,19,0,0" VerticalAlignment="Top"/>
+        <Label Content="Data zamknięcia" HorizontalAlignment="Left" Margin="192,19,0,0" VerticalAlignment="Top"/>
+        <Label Content="Ticker" HorizontalAlignment="Left" Margin="42,79,0,0" VerticalAlignment="Top"/>
+        <Label Content="Operacja" HorizontalAlignment="Left" Margin="371,19,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cbxCurrency" HorizontalAlignment="Left" Height="30" Margin="149,105,0,0" VerticalAlignment="Top" Width="92"/>
+        <Label Content="Ilość" HorizontalAlignment="Left" Margin="44,131,0,0" VerticalAlignment="Top"/>
+        <Label Content="Waluta" HorizontalAlignment="Left" Margin="149,79,0,0" VerticalAlignment="Top"/>
+        <Label Content="Cena - otwarcie" HorizontalAlignment="Left" Margin="44,198,0,0" VerticalAlignment="Top"/>
+        <Label Content="Cena - zamknięcie" HorizontalAlignment="Left" Margin="199,198,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
